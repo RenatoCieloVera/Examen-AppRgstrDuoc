@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Restauración de Contraseña</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="page-background">
+  <div class="form-wrapper">
+    <form class="form" (ngSubmit)="restaurar()">
+      <p id="heading">Restaurar Contraseña</p>
+
+      <!-- Usuario Field -->
+      <ion-item>
+        <ion-input 
+          type="text" 
+          [(ngModel)]="usuario" 
+          name="usuario" 
+          placeholder="Usuario"
+          required>
+        </ion-input>
+      </ion-item>
+
+      <!-- Email Field -->
+      <ion-item>
+        <ion-input 
+          type="email" 
+          [(ngModel)]="email" 
+          name="email" 
+          placeholder="Correo Electrónico"
+          required>
+        </ion-input>
+      </ion-item>
+
+      <!-- Submit Button -->
+      <div class="btn">
+        <ion-button expand="full" type="submit">
+          Restaurar Contraseña
+        </ion-button>
+        <div class="btn_2">
+          <ion-button expand="full" class ="button2" fill="clear" (click)="goBack()"> 
+            Regresar
+          </ion-button>
+        </div>
+      </div>
+    </form>
+  </div>
+</ion-content>

@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Asistencia Alumno</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="content-container">
+    <!-- Lista de días -->
+    <ion-list class="lista-dias">
+      <ion-item *ngFor="let dia of dias" class="lista-item">
+        <ion-label>
+          <h2 class="fecha">{{ dia.fecha | date: 'dd/MM/yyyy' }}</h2>
+          <p [ngClass]="{'falta': dia.falta, 'asistio': !dia.falta}">
+            {{ dia.falta ? 'Falta a la clase' : 'Asistió a la clase' }}
+          </p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+
+    <!-- Botón Volver en la parte inferior -->
+    <ion-footer class="footer">
+      <ion-button class="btn-volver" expand="full" (click)="volverA()">Cerrar Sesion</ion-button>
+    </ion-footer>
+  </div>
+</ion-content>

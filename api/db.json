@@ -1,0 +1,41 @@
+{
+  "alumnos": [
+    {
+      "id": "1",
+      "usuario": "Damian",
+      "contrasena": "DamianAdmin"
+    },
+    {
+      "id": "2",
+      "usuario": "Juan",
+      "contrasena": "1234"
+    },
+    {
+      "id": "25b8",
+      "usuario": "test",
+      "contrasena": "test"
+    },
+    {
+      "id": "c5f9",
+      "usuario": "Damian",
+      "contrasena": "123"
+    }
+  ],
+  "profesores": [
+    {
+      "id": "1",
+      "usuario": "Marcos",
+      "contrasena": "MarcosAdmin"
+    },
+    {
+      "id": "2",
+      "usuario": "Carlos",
+      "contrasena": "abcd"
+    },
+    {
+      "id": "08f0",
+      "usuario": "test",
+      "contrasena": "test"
+    }
+  ]
+}

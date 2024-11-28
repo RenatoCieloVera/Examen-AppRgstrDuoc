@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Asistencia de los Alumnos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="content-container">
+    <!-- Lista de alumnos -->
+    <ion-list>
+      <ion-item *ngFor="let alumno of alumnos" (click)="seleccionarAlumno(alumno)">
+        <ion-label>{{ alumno.usuario }}</ion-label>
+      </ion-item>
+    </ion-list>
+
+    <!-- Si un alumno es seleccionado, mostrar su asistencia -->
+    <div *ngIf="alumnoSeleccionado">
+      <h3>Asistencia de {{ alumnoSeleccionado.usuario }}</h3>
+      
+      <ion-list>
+        <ion-item *ngFor="let dia of dias">
+          <ion-label>
+            <h2>{{ dia.fecha | date: 'dd/MM/yyyy' }}</h2>
+            <p [ngClass]="{'falta': dia.falta, 'asistio': !dia.falta}">
+              {{ dia.falta ? 'Falta a la clase' : 'Asistió a la clase' }}
+            </p>
+          </ion-label>
+
+          <ion-button *ngIf="dia.falta" color="success" (click)="marcarAsistio(dia)">Marcar Presente</ion-button>
+          <ion-button *ngIf="!dia.falta" color="danger" (click)="marcarFalta(dia)">Marcar Ausente</ion-button>
+        </ion-item>
+      </ion-list>
+    </div>
+
+    <ion-footer>
+      <ion-button expand="full" (click)="volverA()">Cerrar Sesión</ion-button>
+    </ion-footer>
+  </div>
+</ion-content>

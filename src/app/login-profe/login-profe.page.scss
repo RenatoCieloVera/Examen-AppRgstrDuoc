@@ -1,0 +1,180 @@
+.page-background {
+    background-image: url('/assets/image/b.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px); 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+  }
+  
+  ion-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 16px;
+    background-color: transparent; /* Asegura que el fondo sea transparente */
+    overflow: hidden; /* Evita barras de desplazamiento */
+  }
+  
+  .container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.4); /* Fondo blanco con 40% de opacidad */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 200px;
+  }
+  
+  .logo {
+    max-width: 150px;
+    margin-bottom: 20px; 
+  }
+  
+  ion-header {
+    --background: #003d7c;
+    --color: #ffffff;
+    display: flex;
+    justify-content: center;  /* Centra horizontalmente */
+    align-items: center;      /* Centra verticalmente */
+    height: 56px; /* Ajusta el alto si es necesario */
+  }
+
+  ion-toolbar {
+    --background: #003d7c;
+    width: 100%;  /* Asegura que el toolbar ocupe todo el ancho */
+    display: flex;
+    justify-content: center;  /* Centra el contenido horizontalmente */
+  }
+
+  ion-header {
+    --color: #003d7c;  
+  }
+
+  ion-title {
+    --color: #ffffff;
+    font-size: 1.5rem; /* Ajusta el tamaño de la fuente si es necesario */
+    text-align: center; /* Asegura que el texto esté centrado */
+    width: 100%; /* Asegura que el título ocupe todo el ancho disponible */
+    display: flex;
+    justify-content: center;  /* Centra el contenido horizontalmente */
+  }
+
+/// formulario de inicio de sesion
+
+.form-wrapper {
+    display: flex;              /* flexbox para centrar los botones */
+    flex-direction: column;     /* Dirección vertical de los botones */
+    justify-content: center;    /* botones horizontalmente */
+    align-items: center;        /* botones verticalmente */
+    gap: 20px;                  /* Espacio entre los botones */
+    height: 85vh;              /* Asegura que el contenedor ocupe toda la altura de la pantalla */
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 2em;
+    background-color: #003d7c;  
+    border-radius: 25px;
+    transition: .4s ease-in-out;
+    max-width: 420px; /* Ajusta el tamaño del formulario */
+    width: 100%;
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+    margin: 0 auto;  /* Asegura que el formulario esté centrado horizontalmente */
+}
+
+.form:hover {
+  transform: scale(1.05);
+  border: 1px solid black;
+}
+
+#heading {
+  text-align: center;
+  margin: 1em 0;
+  color: rgb(255, 255, 255);
+  font-size: 1.5em;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  border-radius: 25px;
+  padding: 0.6em;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: #171717;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+
+.input-icon {
+  height: 1.3em;
+  width: 1.3em;
+  fill: white;
+}
+
+.input-field {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: #000000;
+}
+
+.form .btn {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 2em;
+}
+
+.button1, .button2, .button3 {
+  padding: 0.5em;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  transition: .4s ease-in-out;
+  background-color: #252525;
+  color: white;
+}
+
+.button1 {
+  padding-left: 1.1em;
+  padding-right: 1.1em;
+}
+
+.button2 {
+  padding-left: 2.3em;
+  padding-right: 2.3em;
+}
+
+.button1:hover, .button2:hover {
+  background-color: black;
+  color: white;
+}
+
+.button3 {
+  margin-bottom: 3em;
+}
+
+.button3:hover {
+  background-color: red;
+  color: white;
+}

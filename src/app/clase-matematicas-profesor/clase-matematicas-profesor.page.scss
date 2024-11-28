@@ -1,0 +1,58 @@
+/* clase-matematicas-profesor.page.scss */
+
+/* Contenedor principal para la lista y el footer */
+.content-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;  /* Aseguramos que el contenedor ocupe toda la altura de la pantalla */
+  }
+  
+  /* Lista de días */
+  .lista-dias {
+    flex-grow: 1;  /* La lista ocupará todo el espacio disponible */
+    padding: 0;
+    background-color: #003d7c; /* Color de fondo para la lista */
+    overflow-y: auto; /* Permite hacer scroll si el contenido excede el espacio disponible */
+  }
+  
+  /* Estilo para cada item de la lista */
+  .lista-item {
+    background-color: white;
+    margin: 5px 0;
+    padding: 15px;
+    border-radius: 8px;
+    color: black;
+  }
+  
+  /* Estilo para el texto de la fecha */
+  .fecha {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  /* Estilo para mostrar si faltó o asistió */
+  .falta {
+    color: red;
+  }
+  
+  .asistio {
+    color: green;
+  }
+  
+  /* Botones para marcar presencia o falta */
+  ion-button {
+    margin-top: 10px;
+  }
+  
+  /* El botón Volver en el pie de la página */
+  .footer {
+    padding: 10px;
+  }
+  
+  .btn-volver {
+    background-color: #003d7c; /* Color de fondo para el botón */
+    color: white;  /* Color del texto */
+    font-size: 1.2em;  /* Tamaño de la fuente */
+    border-radius: 0;
+  }
+  

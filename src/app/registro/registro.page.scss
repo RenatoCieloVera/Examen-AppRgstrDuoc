@@ -1,0 +1,218 @@
+/* Fondo de página con imagen y efecto de desenfoque */
+.page-background {
+  background-image: url('/assets/image/b.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(2px); 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; 
+}
+
+/* Estilos de ion-content para asegurar que ocupe todo el fondo */
+ion-content {
+  --background: transparent; /* Fondo transparente */
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden; /* Evita barras de desplazamiento */
+  position: relative;
+}
+
+/* Contenedor principal con opacidad para el formulario */
+.container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.4); /* Fondo blanco con 40% de opacidad */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 50px; /* Ajusta la posición superior */
+}
+
+/* Estilo para el logo */
+.logo {
+  max-width: 150px;
+  margin-bottom: 20px; 
+}
+
+/* Header de Ionic con color de fondo */
+ion-header {
+  --background: #003d7c;  /* Color de fondo del encabezado */
+  --color: #ffffff; /* Color del texto */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 56px;
+}
+
+/* Toolbar de Ionic centrado */
+ion-toolbar {
+  --background: #003d7c;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Título de la página */
+ion-title {
+  --color: #ffffff;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilo para el formulario */
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: auto; /* Asegura que el formulario se ajuste a su contenido */
+}
+
+/* Formulario con fondo y bordes */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 2em;
+  background-color: #003d7c;  
+  border-radius: 25px;
+  transition: .4s ease-in-out;
+  max-width: 420px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+/* Efecto hover para el formulario */
+.form:hover {
+  transform: scale(1.05);
+  border: 1px solid black;
+}
+
+/* Estilo para el encabezado dentro del formulario */
+#heading {
+  text-align: center;
+  margin: 1em 0;
+  color: rgb(255, 255, 255);
+  font-size: 1.5em;
+}
+
+/* Estilo para los campos de entrada */
+.field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  border-radius: 25px;
+  padding: 0.6em;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: #171717;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+
+/* Icono dentro del campo de entrada */
+.input-icon {
+  height: 1.3em;
+  width: 1.3em;
+  fill: white;
+}
+
+/* Campo de entrada sin borde y con fondo transparente */
+.input-field {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: #000000;
+}
+
+/* Botones del formulario */
+.form .btn {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 2em;
+}
+
+/* Estilo de los botones */
+.button1, .button2, .button3 {
+  padding: 0.5em;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  transition: .4s ease-in-out;
+  background-color: #252525;
+  color: white;
+}
+
+/* Botón 1 con mayor relleno */
+.button1 {
+  padding-left: 1.1em;
+  padding-right: 1.1em;
+}
+
+/* Botón 2 con más relleno */
+.button2 {
+  padding-left: 2.3em;
+  padding-right: 2.3em;
+}
+
+/* Efecto hover para los botones */
+.button1:hover, .button2:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Botón 3 con fondo rojo */
+.button3 {
+  margin-bottom: 3em;
+}
+
+.button3:hover {
+  background-color: red;
+  color: white;
+}
+
+/* Estilos de Ionic para los botones */
+ion-button {
+  margin-top: 16px; /* Espacio superior para los botones en Ionic */
+}
+
+ion-item {
+  margin-bottom: 16px; /* Espacio entre los items */
+}
+
+/* Fondo y color de los botones dentro del formulario */
+button {
+  background-color: #3880ff; /* Fondo azul para los botones */
+  color: white;
+  padding: 12px 24px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #004aad; /* Fondo más oscuro cuando se pasa el mouse */
+}

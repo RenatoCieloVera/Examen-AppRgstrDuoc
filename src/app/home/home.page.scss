@@ -1,0 +1,386 @@
+/* Imagen de fondo que cubre toda la pantalla */
+.page-background {
+  background-image: url('/assets/image/b.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(2px); 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; 
+}
+
+ion-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 16px;
+  background-color: transparent; /* Asegura que el fondo sea transparente */
+  overflow: hidden; /* Evita barras de desplazamiento */
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.4); /* Fondo blanco con 40% de opacidad */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 50px; /* Ajusta según lo necesites */
+  min-height: 350px; /* Establece una altura mínima para evitar que el contenedor sea demasiado pequeño */
+}
+
+.logo {
+  max-width: 150px;
+  margin-bottom: 20px; 
+}
+
+ion-header {
+  --background: #003d7c;
+  --color: #ffffff;
+}
+
+ion-toolbar {
+  --background: #003d7c;
+}
+
+ion-title {
+  font-size: 1.8rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+ion-item {
+  --background: transparent;
+  margin-bottom: 12px;
+  --highlight-background: transparent; 
+  border-bottom: 1px solid #d1d1d1;
+}
+
+ion-label {
+  color: #000000;
+}
+
+ion-input {
+  color: #333333;
+}
+
+ion-button {
+  margin-top: 16px;
+  width: 100%;
+  max-width: 400px;
+  --background: #003d7c; 
+  --color: #ffffff;
+  border-radius: 5px;
+}
+
+ion-button[color="secondary"] {
+  --background: #ffcc00; 
+  --color: #003d7c;
+  border-radius: 5px;
+}
+
+ion-header {
+  --color: #003d7c;  
+}
+
+// texto welcome
+
+.welcome_text {
+  display: flex;
+  flex-direction: column;      /* Asegura que los elementos se apilen verticalmente */
+  justify-content: center;     /* Centra los elementos verticalmente */
+  align-items: center;         /* Centra los elementos horizontalmente */
+  height: 100vh;               /* Asegura que ocupe toda la altura de la pantalla */
+}
+
+.welcome_text h3 {
+  color: white;                /* Cambia el color de la fuente a blanco */
+  font-family: 'Arial', sans-serif;  /* Puedes cambiar la fuente según lo desees */
+  font-size: 2rem;             /* Tamaño de fuente ajustable */
+  text-align: center;          /* Alinea el texto al centro */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra sutil al texto */
+}
+
+// form.wapo
+.form-wrapper {
+  display: flex;              /* flexbox para centrar los botones */
+  flex-direction: column;     /* Dirección vertical de los botones */
+  justify-content: center;    /* botones horizontalmente */
+  align-items: center;        /* botones verticalmente */
+  gap: 20px;                  /* Espacio entre los botones */
+  height: 25vh;              /* Asegura que el contenedor ocupe toda la altura de la pantalla */
+}
+
+// modificaicon de botones
+
+button.profe {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: #f4e04d;  /* Degradado azul y amarillo apagado, dividido a la mitad */
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+  border-radius: 30px;         /* Borde redondeado */
+  width: 12rem;                /* Ancho fijo del botón */
+  height: auto;
+}
+
+button.profe .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #282936;
+  border-radius: 1.625rem;
+}
+
+button.profe .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+
+button.profe .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+button.profe .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+
+button.profe .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #282936;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+button.profe:hover .circle {
+  width: 100%;
+}
+
+button.profe:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+
+button.profe:hover .button-text {
+  color: #fff;
+}
+
+/* Estilo para el botón 'Alumno' */
+button.alumno {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: #f4e04d;  /* Degradado azul y amarillo apagado, dividido a la mitad */
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+  border-radius: 30px;         /* Borde redondeado */
+  width: 12rem;                /* Ancho fijo del botón */
+  height: auto;
+}
+
+button.alumno .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #282936;
+  border-radius: 1.625rem;
+}
+
+button.alumno .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+
+button.alumno .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+button.alumno .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+
+button.alumno .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #282936;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+button.alumno:hover .circle {
+  width: 100%;
+}
+
+button.alumno:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+
+button.alumno:hover .button-text {
+  color: #fff;
+}
+
+/* Estilo para el botón 'Registrarse' */
+button.registrarse {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: #f4e04d;  /* Mismo degradado amarillo */
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+  border-radius: 30px;         /* Borde redondeado */
+  width: 12rem;                /* Ancho fijo del botón */
+  height: auto;
+}
+
+button.registrarse .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #282936;
+  border-radius: 1.625rem;
+}
+
+button.registrarse .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+
+button.registrarse .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+button.registrarse .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+
+button.registrarse .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #282936;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+button.registrarse:hover .circle {
+  width: 100%;
+}
+
+button.registrarse:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+
+button.registrarse:hover .button-text {
+  color: #fff;
+}

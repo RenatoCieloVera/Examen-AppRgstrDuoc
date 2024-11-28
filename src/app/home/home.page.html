@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar class="">
+    <ion-title>Bienvenido a RegistrAPP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Imagen de fondo -->
+  <div class="page-background"></div>
+
+  <!--logo-->
+  <img src="assets/image/a.png" alt="Duoc Logo" class="logo">
+  <!-- Contenedor del contenido -->
+  <div class="container">
+    <div class="form-wrapper">
+      <div class = "welcome_text">
+      <h3>¡Elige tu perfil: Profesor o Alumno!</h3>
+      </div>
+
+      <button class="profe" (click)="voyB()">
+        <span class="circle" aria-hidden="true">
+        <span class="icon arrow"></span>
+        </span>
+        <span class="button-text">Profesor</span>
+      </button>
+      <button class="alumno" (click)="voyA()">
+        <span class="circle" aria-hidden="true">
+        <span class="icon arrow"></span>
+        </span>
+        <span class="button-text">Alumno</span>
+      </button>
+      <button class="registrarse" (click)="registrarse()">
+        <span class="circle" aria-hidden="true">
+        <span class="icon arrow"></span>
+        </span>
+        <span class="button-text">Registrarse</span>
+      </button>
+      <canvas id="qrCanvas"></canvas>
+      <button class = "alumno" (click)="generateQRCode()">Generar QR</button>
+      <button class="alumno" (click)="errorSimulado()">Ava Duoc</button>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+</ion-footer>
